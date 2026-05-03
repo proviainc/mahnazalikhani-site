@@ -1,0 +1,42 @@
+# Build static export and deploy to Cloudflare Pages (direct upload).
+# Requires repository secrets (Settings → Secrets → Actions):
+#   CLOUDFLARE_API_TOKEN — see docs/10-publish-handoff.md for required scopes
+#   CLOUDFLARE_ACCOUNT_ID — from Cloudflare dashboard URL or `wrangler whoami`
+
+name: Deploy Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: pages-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install and build
+        run: pnpm install --frozen-lockfile && pnpm build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy out --project-name=mahnazalikhani-site --branch=main

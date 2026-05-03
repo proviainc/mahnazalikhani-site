@@ -10,6 +10,7 @@ Browser QA on the **Cloudflare preview URL**, Pages project wiring, and DNS cuto
 
 ## Confirmed
 
+- **GitHub remote:** `https://github.com/proviainc/mahnazalikhani-site` (`main` pushed; CI deploy workflow added; add `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` in repo **Actions secrets** to enable Pages deploy)
 - Website repo/folder name: `mahnazalikhani-site`
 - Website repo path: `/Users/amintizdast/Documents/ProVia/Websites/mahnazalikhani-site`
 - Docs path: `/Users/amintizdast/Documents/ProVia/Websites/mahnazalikhani-site/docs`

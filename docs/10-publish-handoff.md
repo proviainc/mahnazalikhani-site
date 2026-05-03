@@ -4,32 +4,38 @@ Stakeholder approval for the **current build** is recorded in `docs/00-operation
 
 ## 1 — GitHub repository and first push
 
-1. Create an **empty** repository on the ProVia GitHub org (recommended name: `mahnazalikhani-site`). Do **not** add a README, `.gitignore`, or license from the GitHub UI (avoids merge noise).
-2. From this folder on your machine:
+**Done:** Repository **`https://github.com/proviainc/mahnazalikhani-site`** exists with `main` pushed (initial import).
+
+**Commit email / push protection:** If GitHub rejects pushes with `GH007` (private email), configure this repo to use a GitHub **noreply** address, then amend or recommit:
 
 ```bash
-cd /Users/amintizdast/Documents/ProVia/Websites/mahnazalikhani-site
-git status   # expect clean tree on main
-git remote add origin git@github.com:proviainc/mahnazalikhani-site.git
-git push -u origin main
+git config user.email "YOUR_GITHUB_NUMERIC_ID+YOUR_LOGIN@users.noreply.github.com"
+git commit --amend --reset-author --no-edit
+git push
 ```
 
-3. In GitHub: set **`main`** as default branch, enable **branch protection** on `main` (require PR or restrict pushes as per org policy).
+(Find numeric id: `gh api user --jq .id`.)
 
-If the remote already exists with history, use the org’s normal flow (PR from branch) instead of an empty push.
+**Branch protection:** In GitHub → Settings → Branches, add a rule for `main` as per org policy.
 
 ## 2 — Cloudflare Pages
 
-1. **Create project:** Pages → Create a project → Connect to Git → select `proviainc/mahnazalikhani-site`, production branch **`main`**.
-2. **Build settings:**
-   - **Build command:** `pnpm build`
-   - **Build output directory:** `out`
-   - **Root directory:** `/` (repository root)
-3. **Environment variables (build):** set versions to match a successful local build, for example:
-   - `NODE_VERSION` = `22` (or whatever `node -v` was when `pnpm build` last passed)
-   - `PNPM_VERSION` = `9` (or match `pnpm -v` major)
-4. Trigger a deploy; open the **Pages preview URL** and run `docs/10-qa-checklist.md` (and device matrix) once.
-5. After approval: confirm **production** deployment for `main` and note the production `*.pages.dev` hostname.
+**Path A — GitHub Actions (recommended here):** Workflow **`.github/workflows/deploy-cloudflare-pages.yml`** builds `pnpm build` and runs **`wrangler pages deploy out`** on every push to `main`.
+
+1. In the GitHub repo → **Settings → Secrets and variables → Actions**, add:
+   - **`CLOUDFLARE_API_TOKEN`** — API Token with at least:
+     - **Account** → Cloudflare Pages → **Edit**
+     - **Account** → **Read** (or membership access so Wrangler can resolve account; if `wrangler pages project list` fails with code `10000`, broaden token per [API token permissions](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/))
+     - Optional: **User** → **Memberships** → **Read** (helps some Wrangler calls)
+   - **`CLOUDFLARE_ACCOUNT_ID`** — Cloudflare dashboard (any zone URL) or run `wrangler whoami` locally.
+
+2. Push to `main` (or **Actions → Deploy Cloudflare Pages → Run workflow**). First successful deploy creates or updates the **`mahnazalikhani-site`** Pages project and returns a **`*.pages.dev`** URL in the job log.
+
+3. Run **`docs/10-qa-checklist.md`** (and device matrix) against that URL.
+
+**Path B — Cloudflare “Connect to Git”:** Pages → Create project → Connect to Git → `proviainc/mahnazalikhani-site`, branch **`main`**, build **`pnpm build`**, output **`out`**, set **`NODE_VERSION`** / **`PNPM_VERSION`** to match local successful builds. Use this if you prefer Cloudflare-hosted builds instead of GitHub Actions.
+
+**CLI note:** If local `wrangler pages project create` fails with **Authentication error [code: 10000]**, the token in `CLOUDFLARE_API_TOKEN` needs the scopes above; do not rely on a zone-only DNS token.
 
 ## 3 — DNS (apex + optional www)
 

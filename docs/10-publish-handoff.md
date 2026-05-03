@@ -22,7 +22,16 @@ git push
 
 **Path A — GitHub Actions (recommended here):** Workflow **`.github/workflows/deploy-cloudflare-pages.yml`** builds `pnpm build` and runs **`wrangler pages deploy out`** on every push to `main`.
 
-1. In the GitHub repo → **Settings → Secrets and variables → Actions**, add:
+1. In the GitHub repo → **Settings → Secrets and variables → Actions**, add (or from a shell where the values are available):
+
+   ```bash
+   gh secret set CLOUDFLARE_API_TOKEN -R proviainc/mahnazalikhani-site
+   gh secret set CLOUDFLARE_ACCOUNT_ID -R proviainc/mahnazalikhani-site
+   ```
+
+   (Each command prompts for the value, or pipe from your env as appropriate for your security policy.)
+
+   Manual UI fields:
    - **`CLOUDFLARE_API_TOKEN`** — API Token with at least:
      - **Account** → Cloudflare Pages → **Edit**
      - **Account** → **Read** (or membership access so Wrangler can resolve account; if `wrangler pages project list` fails with code `10000`, broaden token per [API token permissions](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/))

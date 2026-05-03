@@ -11,7 +11,7 @@ Browser QA on the **Cloudflare preview URL**, Pages project wiring, and DNS cuto
 ## Confirmed
 
 - **GitHub remote:** `https://github.com/proviainc/mahnazalikhani-site` (`main`; CI deploy workflow; Cloudflare **Actions secrets** set)
-- **Cloudflare Pages:** project **`mahnazalikhani-site`**; **`https://mahnazalikhani-site.pages.dev`** (custom domain still per §3 handoff)
+- **Cloudflare Pages:** project **`mahnazalikhani-site`**; **`https://mahnazalikhani-site.pages.dev`**. Custom hostnames **`mahnazalikhani.com`** and **`www.mahnazalikhani.com`** are attached to the project (API); complete DNS/SSL in Dashboard per **`docs/10-publish-handoff.md` §3** if verification stays pending.
 - Website repo/folder name: `mahnazalikhani-site`
 - Website repo path: `/Users/amintizdast/Documents/ProVia/Websites/mahnazalikhani-site`
 - Docs path: `/Users/amintizdast/Documents/ProVia/Websites/mahnazalikhani-site/docs`

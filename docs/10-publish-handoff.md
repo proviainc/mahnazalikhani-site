@@ -52,11 +52,13 @@ git push
 
 Canonical site URL is **`https://mahnazalikhani.com`** (apex). See `docs/10-dns-cutover-checklist.md` for the full gate.
 
-**Typical Cloudflare Pages custom domain:**
+**Done via API:** Both **`mahnazalikhani.com`** and **`www.mahnazalikhani.com`** are attached to the Pages project **`mahnazalikhani-site`** (production target **`mahnazalikhani-site.pages.dev`**). Status may show **pending** until DNS validates.
 
-1. In Pages → project → **Custom domains**: add `mahnazalikhani.com` and, if desired, `www.mahnazalikhani.com`.
-2. Follow Cloudflare’s DNS prompts (often it creates the right **CNAME** to `*.pages.dev` automatically).
-3. If **www** exists: add a **redirect rule** (or Bulk Redirect) **www → apex** so only one hostname serves the site, matching `site.config.ts` and stakeholder decisions.
+**Finish in Cloudflare Dashboard (required if status stays “CNAME record not set”):**
+
+1. **Workers & Pages** → **`mahnazalikhani-site`** → **Custom domains**. Open each hostname and complete the setup flow so Cloudflare can create (or you confirm) the proxied **CNAME** to **`mahnazalikhani-site.pages.dev`**.
+2. If you prefer **manual DNS** in the **`mahnazalikhani.com`** zone instead: add **proxied** CNAME records **`@`** and **`www`** → **`mahnazalikhani-site.pages.dev`** (apex CNAME flattening applies on Cloudflare).
+3. **www → apex (stakeholder):** After both names resolve, add a **Single redirect** (Rules → Redirect Rules): if hostname equals `www.mahnazalikhani.com`, redirect to `https://mahnazalikhani.com` preserving path (301).
 
 4. Wait for **SSL active** on the custom host, then re-run link and OG checks from `docs/10-search-readiness-checklist.md`.
 

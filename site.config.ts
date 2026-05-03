@@ -20,7 +20,7 @@ export const siteConfig = {
     alt: 'Mahnaz Alikhani, senior event planner and strategist, professional portrait.',
   },
   url: 'https://mahnazalikhani.com',
-  /** Apex is canonical; redirect `www` → apex at DNS / edge if both exist. */
+  /** Apex is canonical; `www` → apex is enforced in `public/_worker.js` (Pages advanced mode). */
   contact: {
     work: {
       label: 'mahnaz@proviaevents.com',

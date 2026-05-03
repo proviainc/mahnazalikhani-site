@@ -66,11 +66,15 @@ pnpm cf:sync-dns
 
 The token must include **Zone → DNS → Edit** (and **Zone → DNS → Read**) for **`mahnazalikhani.com`** on the account that owns the zone. If `curl .../zones?name=mahnazalikhani.com` returns an empty `result` array, the token is still scoped to other zones only; widen **Zone resources** on that API token in the Cloudflare dashboard, then rerun `pnpm cf:sync-dns`. Default `MAHNAZ_CF_ZONE_ID` matches the zone Cloudflare Pages linked when custom domains were added; override if your zone id differs.
 
+**If DNS create fails with `81053`:** Remove any conflicting apex **`A`/`AAAA`** (and stale apex **`NS`** to parking hosts) so a single proxied apex CNAME to **`mahnazalikhani-site.pages.dev`** can exist.
+
+**If Pages shows “CNAME record not set” while the record exists:** Proxied (**orange cloud**) answers are **A/AAAA**, not CNAME, so Pages verification can stay pending. Temporarily set the **`@`** and **`www`** CNAMEs to **DNS only** until each custom domain is **active**, then set them back to **Proxied**.
+
 **Finish in Cloudflare Dashboard (if you skip CLI):**
 
 1. **Workers & Pages** → **`mahnazalikhani-site`** → **Custom domains**. Open each hostname and complete the setup flow so Cloudflare can create (or you confirm) the proxied **CNAME** to **`mahnazalikhani-site.pages.dev`**.
 2. If you prefer **manual DNS** in the **`mahnazalikhani.com`** zone instead: add **proxied** CNAME records **`@`** and **`www`** → **`mahnazalikhani-site.pages.dev`** (apex CNAME flattening applies on Cloudflare).
-3. **www → apex (stakeholder):** After both names resolve, add a **Single redirect** (Rules → Redirect Rules): if hostname equals `www.mahnazalikhani.com`, redirect to `https://mahnazalikhani.com` preserving path (301).
+3. **www → apex (stakeholder):** Implemented in **`public/_worker.js`** (Cloudflare Pages advanced mode; Next static export does not ship `middleware.ts`). Optionally duplicate in **Rules → Redirect Rules** if the API token gains **Zone → Rulesets** and you want zone-level redirects.
 
 4. Wait for **SSL active** on the custom host, then re-run link and OG checks from `docs/10-search-readiness-checklist.md`.
 

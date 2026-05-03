@@ -54,7 +54,19 @@ Canonical site URL is **`https://mahnazalikhani.com`** (apex). See `docs/10-dns-
 
 **Done via API:** Both **`mahnazalikhani.com`** and **`www.mahnazalikhani.com`** are attached to the Pages project **`mahnazalikhani-site`** (production target **`mahnazalikhani-site.pages.dev`**). Status may show **pending** until DNS validates.
 
-**Finish in Cloudflare Dashboard (required if status stays “CNAME record not set”):**
+**CLI / API sync (preferred once token covers the zone):** Wrangler does **not** edit zone DNS. Use the repo script (Cloudflare REST API):
+
+```bash
+cd /Users/amintizdast/Documents/ProVia/Websites/mahnazalikhani-site
+set -a && source ../proviahub-site/.env.local && set +a   # or any env with CLOUDFLARE_API_TOKEN
+# Optional: export MAHNAZ_CF_ZONE_ID="$(curl -sS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+#   "https://api.cloudflare.com/client/v4/zones?name=mahnazalikhani.com" | python3 -c "import json,sys; print(json.load(sys.stdin)['result'][0]['id'])")"
+pnpm cf:sync-dns
+```
+
+The token must include **Zone → DNS → Edit** (and **Zone → DNS → Read**) for **`mahnazalikhani.com`** on the account that owns the zone. If `curl .../zones?name=mahnazalikhani.com` returns an empty `result` array, the token is still scoped to other zones only; widen **Zone resources** on that API token in the Cloudflare dashboard, then rerun `pnpm cf:sync-dns`. Default `MAHNAZ_CF_ZONE_ID` matches the zone Cloudflare Pages linked when custom domains were added; override if your zone id differs.
+
+**Finish in Cloudflare Dashboard (if you skip CLI):**
 
 1. **Workers & Pages** → **`mahnazalikhani-site`** → **Custom domains**. Open each hostname and complete the setup flow so Cloudflare can create (or you confirm) the proxied **CNAME** to **`mahnazalikhani-site.pages.dev`**.
 2. If you prefer **manual DNS** in the **`mahnazalikhani.com`** zone instead: add **proxied** CNAME records **`@`** and **`www`** → **`mahnazalikhani-site.pages.dev`** (apex CNAME flattening applies on Cloudflare).

@@ -33,6 +33,7 @@ pnpm install
 pnpm dev
 pnpm typecheck
 pnpm build
+pnpm cf:sync-dns   # after API token includes Zone DNS Edit for mahnazalikhani.com; see docs/10-publish-handoff.md
 ```
 
 Cloudflare Pages should use:

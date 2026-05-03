@@ -9,7 +9,8 @@
     "dev": "next dev",
     "lint": "next lint",
     "test": "vitest run --passWithNoTests",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "cf:sync-dns": "bash scripts/cloudflare-sync-pages-dns.sh"
   },
   "dependencies": {
     "next": "^15.1.4",

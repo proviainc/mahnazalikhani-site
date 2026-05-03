@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(168, 100, 61, 0.14), transparent 34%),
+    linear-gradient(180deg, #fbf7ef 0%, #f5ecdf 52%, #fbf7ef 100%);
+  color: var(--brand-text);
+  font-family: var(--font-sans), ui-sans-serif, system-ui;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.prose {
+  max-width: 70ch;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  font-family: var(--font-display), ui-serif, Georgia;
+  color: var(--brand-text);
+}
+
+.prose p,
+.prose li {
+  color: var(--brand-muted);
+  line-height: 1.9;
+}
+
+::selection {
+  background: rgba(168, 100, 61, 0.22);
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-6xl px-5 py-16 sm:px-6 lg:px-8 lg:py-24;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.28em] text-copper;
+  }
+
+  .display-heading {
+    @apply font-display text-5xl font-semibold leading-[0.95] tracking-[-0.03em] text-espresso sm:text-6xl lg:text-7xl;
+  }
+
+  .section-heading {
+    @apply font-display text-4xl font-semibold leading-tight tracking-[-0.025em] text-espresso sm:text-5xl;
+  }
+
+  .body-large {
+    @apply text-lg leading-8 text-muted;
+  }
+
+  .card {
+    @apply rounded-[2rem] border border-espresso/10 bg-warmIvory p-7 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-espresso px-5 py-3 text-sm font-bold text-warmIvory shadow-sm transition hover:bg-copperDark focus:outline-none focus:ring-2 focus:ring-copper focus:ring-offset-2 focus:ring-offset-warmIvory;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-espresso/15 px-5 py-3 text-sm font-bold text-espresso transition hover:border-copper hover:text-copper;
+  }
+
+  .btn-on-dark {
+    @apply bg-warmIvory text-espresso hover:bg-copperLight;
+  }
+
+  .btn-on-dark-secondary {
+    @apply border-warmIvory/25 text-warmIvory hover:border-warmIvory hover:text-warmIvory;
+  }
+}
+

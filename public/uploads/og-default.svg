@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#FBF7EF"/>
+  <rect x="72" y="72" width="1056" height="486" rx="42" fill="#2A211C"/>
+  <path d="M154 156h190v318H154z" fill="#EFE3D1"/>
+  <path d="M190 206h118M190 252h92M190 298h118M190 344h78" stroke="#A8643D" stroke-width="10" stroke-linecap="round"/>
+  <text x="420" y="245" fill="#FBF7EF" font-size="72" font-family="Georgia, serif" font-weight="700">Mahnaz Alikhani</text>
+  <text x="420" y="316" fill="#D6A37E" font-size="34" font-family="Arial, sans-serif" font-weight="700">Senior Event Planner And Strategist</text>
+  <text x="420" y="384" fill="#FBF7EF" opacity="0.78" font-size="30" font-family="Arial, sans-serif">Calm event strategy for high-stakes gatherings.</text>
+</svg>
+

@@ -1,0 +1,4 @@
+id,severity,area,summary,status,owner,opened,closed,notes
+ISSUE-001,low,assets,Favicon and apple-touch-icon not yet defined for launch polish,open,,,,Add under public/ when brand mark approved
+ISSUE-002,medium,content,EventAgent title on live site must match written approval when title is finalized,open,,,,Soften or remove speculative title claims until approved
+ISSUE-003,low,repo,Git remote and Cloudflare Pages project may need creation and branch protection,open,,,,Track in launch checklist

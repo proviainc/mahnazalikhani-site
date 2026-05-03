@@ -1,0 +1,12 @@
+Asset,Type,Source,Status,Use In Site,Notes
+"Mahnaz resume","PDF","/Users/amintizdast/Documents/Mahnaz Resume/Mahnaz_Resume_v2.pdf","Reviewed","About, proof, experience, selected work","Primary structured source for roles and achievements."
+"LinkedIn profile","Public profile","https://www.linkedin.com/in/mahnazalikhani/","Reviewed","Trust, bio, social link, experience validation","Use as secondary verification and visible social proof."
+"Calendly event strategy link","Booking URL","https://calendly.com/mahnazalikhani/event-strategy","Confirmed","Primary CTA","Use for Book Consultation CTA."
+"ProVia Events website","Website","https://proviaevents.com/","Reviewed","Affiliation, service context, proof direction","Do not duplicate as the primary site."
+"ProVia Events docs","Website strategy docs","/Users/amintizdast/Documents/ProVia/Websites/proviaevents-site/docs","Partially reviewed","Voice, service framing, event context","Use selectively for alignment."
+"EventAgent website","Website","https://eventagent.io/","Reviewed","Event operations and strategy context","Use to frame structured coordination and technology-informed event strategy."
+"Mahnaz portrait","Image","To be provided","Missing","Hero/about/trust","Needed before design lock."
+"Testimonials","Proof","Potentially ProVia Events or client-provided","Unverified","Proof section if approved","Do not invent or reuse without approval."
+"Event photos/gallery","Images","Potentially ProVia Events or client-provided","Unverified","Selected experience, visual credibility","Use only approved public images."
+"Event logos/client logos","Images/proof","Potentially client-provided","Unverified","Credibility strip or selected work","Use only with permission."
+"DNS/domain details","Technical","MahnazAlikhani.com","Unconfirmed","Launch planning","Required before production domain connection."

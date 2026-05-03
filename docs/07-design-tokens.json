@@ -1,0 +1,103 @@
+{
+  "colors": {
+    "warmIvory": "#FBF7EF",
+    "softSand": "#F1E8DC",
+    "porcelain": "#FFFFFF",
+    "espresso": "#2A211C",
+    "deepInk": "#161412",
+    "warmGraphite": "#514A45",
+    "mutedTaupe": "#8A7C71",
+    "copper": "#A8643D",
+    "copperDark": "#7D472B",
+    "deepTeal": "#245E5A",
+    "tealSoft": "#DDEDEA",
+    "linenBorder": "#E1D6C9",
+    "error": "#A33F32",
+    "success": "#2F6F57"
+  },
+  "fontFamily": {
+    "display": "Cormorant Garamond, Playfair Display, Georgia, serif",
+    "body": "Inter, Lato, system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+  },
+  "fontSize": {
+    "displayXL": "64px",
+    "displayL": "52px",
+    "h1Mobile": "38px",
+    "h2": "40px",
+    "h2Mobile": "30px",
+    "h3": "24px",
+    "bodyL": "18px",
+    "body": "16px",
+    "small": "14px",
+    "meta": "13px"
+  },
+  "lineHeight": {
+    "display": "1.04",
+    "heading": "1.16",
+    "body": "1.65",
+    "compact": "1.35"
+  },
+  "spacing": {
+    "sectionDesktopLarge": "128px",
+    "sectionDesktop": "104px",
+    "sectionTablet": "80px",
+    "sectionMobile": "64px",
+    "gridGapDesktop": "28px",
+    "gridGapTablet": "22px",
+    "gridGapMobile": "18px",
+    "cardPaddingDesktop": "30px",
+    "cardPaddingMobile": "22px",
+    "contentStack": "24px",
+    "contentStackTight": "14px"
+  },
+  "radius": {
+    "sm": "4px",
+    "md": "8px",
+    "lg": "14px",
+    "xl": "22px",
+    "pill": "999px"
+  },
+  "layout": {
+    "maxWidthStandard": "1180px",
+    "maxWidthWide": "1280px",
+    "maxWidthText": "720px",
+    "maxWidthNarrow": "620px",
+    "headerDesktopHeight": "76px",
+    "headerMobileHeight": "68px",
+    "logoDesktopMaxWidth": "180px",
+    "logoDesktopMaxHeight": "36px",
+    "logoMobileMaxWidth": "150px",
+    "logoMobileMaxHeight": "34px"
+  },
+  "shadow": {
+    "card": "0 14px 34px rgba(42, 33, 28, 0.07)",
+    "header": "0 8px 24px rgba(42, 33, 28, 0.06)",
+    "soft": "0 10px 22px rgba(42, 33, 28, 0.05)",
+    "none": "none"
+  },
+  "border": {
+    "subtle": "1px solid #E1D6C9",
+    "strong": "1px solid rgba(42, 33, 28, 0.18)"
+  },
+  "motion": {
+    "mode": "minimal-to-moderate",
+    "enterDuration": "320ms",
+    "hoverDuration": "160ms",
+    "stagger": "70ms",
+    "easeOut": "cubic-bezier(0.16, 1, 0.3, 1)",
+    "easeStandard": "cubic-bezier(0.2, 0, 0, 1)"
+  },
+  "buttons": {
+    "heightDesktop": "46px",
+    "heightMobile": "44px",
+    "paddingX": "20px",
+    "paddingXMobile": "18px",
+    "radius": "999px"
+  },
+  "breakpoints": {
+    "mobile": "0px",
+    "tablet": "768px",
+    "desktop": "1024px",
+    "wide": "1280px"
+  }
+}

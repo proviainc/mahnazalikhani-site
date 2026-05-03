@@ -20,7 +20,9 @@ git push
 
 ## 2 — Cloudflare Pages
 
-**Path A — GitHub Actions (recommended here):** Workflow **`.github/workflows/deploy-cloudflare-pages.yml`** builds `pnpm build` and runs **`wrangler pages deploy out`** on every push to `main`.
+**Status:** Pages project **`mahnazalikhani-site`** exists. Production hostname: **`https://mahnazalikhani-site.pages.dev`** (each deploy also gets a unique `*.mahnazalikhani-site.pages.dev` preview URL in the deploy log).
+
+**Path A — GitHub Actions (recommended here):** Workflow **`.github/workflows/deploy-cloudflare-pages.yml`** builds `pnpm build` and runs **`wrangler pages deploy out`** on every push to `main`. Repository **Actions secrets** `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are configured for this repo.
 
 1. In the GitHub repo → **Settings → Secrets and variables → Actions**, add (or from a shell where the values are available):
 

@@ -16,6 +16,10 @@ export default {
       url.protocol = 'https:';
       return Response.redirect(url.toString(), 301);
     }
+    if (url.pathname === '/c' || url.pathname === '/c/') {
+      url.pathname = '/card/';
+      return Response.redirect(url.toString(), 302);
+    }
     return env.ASSETS.fetch(request);
   },
 };

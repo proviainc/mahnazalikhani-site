@@ -97,4 +97,5 @@ export const pages = [
   { pathname: '/experience', title: 'Experience' },
   { pathname: '/speaking', title: 'Speaking' },
   { pathname: '/event-strategy', title: 'Event Strategy' },
+  { pathname: '/card', title: 'Card' },
 ] as const;

@@ -18,6 +18,8 @@ body {
     linear-gradient(180deg, #fbf7ef 0%, #f5ecdf 52%, #fbf7ef 100%);
   color: var(--brand-text);
   font-family: var(--font-sans), ui-sans-serif, system-ui;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
 }
 
 a {
@@ -88,3 +90,23 @@ a {
   }
 }
 
+@media print {
+  @page {
+    margin: 12mm;
+    size: auto;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+  }
+
+  header,
+  footer {
+    display: none !important;
+  }
+
+  [data-digital-card] {
+    break-inside: avoid;
+  }
+}

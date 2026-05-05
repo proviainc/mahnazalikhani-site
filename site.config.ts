@@ -30,6 +30,8 @@ export const siteConfig = {
       label: 'mahnaz.alikhani53@gmail.com',
       email: 'mahnaz.alikhani53@gmail.com',
     },
+    /** vCard-only phone; intentionally omitted from public HTML, metadata, and structured data. */
+    phoneVcardOnly: '+16479965350',
   },
   primaryCta: {
     label: 'Book Consultation',
@@ -57,6 +59,7 @@ export const siteConfig = {
         { label: 'Experience', href: '/experience' },
         { label: 'Speaking', href: '/speaking' },
         { label: 'Event Strategy', href: '/event-strategy' },
+        { label: 'Card', href: '/card' },
       ],
     },
     {
@@ -117,6 +120,7 @@ export const siteConfig = {
   contact: {
     work: { label: string; email: string };
     personal: { label: string; email: string };
+    phoneVcardOnly?: string;
   };
   primaryCta: SiteLink;
   secondaryCta: SiteLink;

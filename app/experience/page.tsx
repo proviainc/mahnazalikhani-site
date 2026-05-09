@@ -53,14 +53,14 @@ export default function ExperiencePage() {
           eyebrow="Selected Context"
           title="Six focused chapters selected from her professional background."
         />
-        <CardGrid items={selectedExperienceChapters} />
+        <CardGrid items={selectedExperienceChapters} role="proof" />
       </section>
       <section className="section-shell">
         <SectionIntro
           eyebrow="Proof Areas"
           title="Where her event perspective is most relevant."
         />
-        <CardGrid items={proofAreas} />
+        <CardGrid items={proofAreas} role="fit" />
       </section>
       <CTASection
         title="Meet her to find out what she can do for your event."

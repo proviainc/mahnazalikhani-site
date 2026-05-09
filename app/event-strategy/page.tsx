@@ -49,9 +49,11 @@ export default function EventStrategyPage() {
           title="The consultation is designed for teams who need clarity before committing the next step."
         />
         <div className="mt-10 grid gap-4">
-          {consultationFit.map((item) => (
-            <div key={item} className="card flex gap-4">
-              <span className="mt-1 h-3 w-3 shrink-0 rounded-full bg-copper" aria-hidden="true" />
+          {consultationFit.map((item, index) => (
+            <div key={item} className="card relative overflow-hidden border-l-4 border-l-copper bg-softSand/35">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-copper">
+                Fit clarity {String(index + 1).padStart(2, '0')}
+              </p>
               <p className="text-lg leading-8 text-muted">{item}</p>
             </div>
           ))}
@@ -62,7 +64,7 @@ export default function EventStrategyPage() {
           eyebrow="How The Call Helps"
           title="A simple flow for turning uncertainty into planning priorities."
         />
-        <CardGrid items={consultationSteps} />
+        <CardGrid items={consultationSteps} role="process" />
       </section>
       <CTASection
         title="Book Mahnaz’s event strategy consultation."

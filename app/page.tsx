@@ -28,21 +28,21 @@ export default function HomePage() {
           title="For events where the details carry real reputational weight."
           description="The site is intentionally focused: help visitors understand Mahnaz’s judgment, decide whether there is a fit, and book a consultation."
         />
-        <CardGrid items={audienceCards} />
+        <CardGrid items={audienceCards} role="fit" />
       </section>
       <section className="section-shell">
         <SectionIntro
           eyebrow="Operating Philosophy"
           title="Premium event work is structured long before guests arrive."
         />
-        <CardGrid items={philosophy} />
+        <CardGrid items={philosophy} role="system" />
       </section>
       <section className="section-shell">
         <SectionIntro
           eyebrow="Selected Experience"
           title="Four highlights from a longer operating arc. See Experience for the full chapter list."
         />
-        <CardGrid items={homeExperiencePreview} />
+        <CardGrid items={homeExperiencePreview} role="proof" />
       </section>
       <CTASection
         title="Start with a focused event strategy conversation."

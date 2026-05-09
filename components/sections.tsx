@@ -4,6 +4,49 @@ import Image from 'next/image';
 import { TrackedLink } from './page-shell';
 import { siteConfig } from '../site.config';
 
+type CardRole = 'default' | 'fit' | 'system' | 'proof' | 'process';
+
+const cardRoleStyles: Record<
+  CardRole,
+  {
+    accent: string;
+    label: string;
+    labelClass: string;
+    cardClass: string;
+  }
+> = {
+  default: {
+    accent: '',
+    label: '',
+    labelClass: 'text-muted',
+    cardClass: '',
+  },
+  fit: {
+    accent: 'bg-copper',
+    label: 'Fit',
+    labelClass: 'text-copper',
+    cardClass: 'bg-warmIvory',
+  },
+  system: {
+    accent: 'bg-deepTeal',
+    label: 'System',
+    labelClass: 'text-deepTeal',
+    cardClass: 'bg-softSand/35',
+  },
+  proof: {
+    accent: 'bg-copperDark',
+    label: 'Proof',
+    labelClass: 'text-copperDark',
+    cardClass: 'bg-warmIvory',
+  },
+  process: {
+    accent: 'bg-deepTeal',
+    label: 'Step',
+    labelClass: 'text-deepTeal',
+    cardClass: 'bg-warmIvory',
+  },
+};
+
 /**
  * Editorial hero portrait: studio background aligns with a calm, premium frame;
  * object position keeps face as the focal point across breakpoints.
@@ -94,13 +137,40 @@ export function SectionIntro({
 
 export function CardGrid({
   items,
+  role = 'default',
 }: {
   items: ReadonlyArray<{ title: string; description: string }>;
+  role?: CardRole;
 }) {
+  const styles = cardRoleStyles[role];
+
   return (
     <div className="mt-10 grid gap-5 md:grid-cols-2">
-      {items.map((item) => (
-        <article key={item.title} className="card">
+      {items.map((item, index) => (
+        <article
+          key={item.title}
+          className={`card group relative overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-soft ${styles.cardClass}`}
+        >
+          {role === 'process' ? (
+            <div className="mb-6 flex items-center gap-3">
+              <span className="flex size-10 items-center justify-center rounded-full border border-deepTeal/20 bg-deepTeal/8 text-sm font-bold text-deepTeal">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <span className={`text-xs font-bold uppercase tracking-[0.22em] ${styles.labelClass}`}>
+                {styles.label}
+              </span>
+            </div>
+          ) : styles.label ? (
+            <p className={`mb-5 text-xs font-bold uppercase tracking-[0.22em] ${styles.labelClass}`}>
+              {styles.label} {String(index + 1).padStart(2, '0')}
+            </p>
+          ) : null}
+          {role === 'process' ? (
+            <span className={`absolute inset-x-0 top-0 h-1 ${styles.accent}`} aria-hidden="true" />
+          ) : null}
+          {role !== 'default' && role !== 'process' ? (
+            <span className={`absolute inset-y-7 left-0 w-1 rounded-r-full ${styles.accent}`} aria-hidden="true" />
+          ) : null}
           <h3 className="font-display text-3xl font-semibold text-espresso">{item.title}</h3>
           <p className="mt-4 text-base leading-8 text-muted">{item.description}</p>
         </article>

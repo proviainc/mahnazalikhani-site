@@ -35,13 +35,13 @@ export default function CardPage() {
           { name: 'Card', pathname: '/card' },
         ]}
       />
-      <section className="mx-auto max-w-5xl px-5 py-10 sm:px-6 lg:px-8 lg:py-16 print:max-w-none print:px-0 print:py-0">
+      <section className="mx-auto max-w-5xl px-3 py-4 min-[390px]:px-4 sm:px-6 sm:py-10 lg:px-8 lg:py-16 print:max-w-none print:px-0 print:py-0">
         <article
           data-digital-card
-          className="overflow-hidden rounded-[1.75rem] border border-espresso/10 bg-warmIvory shadow-soft print:rounded-xl print:shadow-none"
+          className="overflow-hidden rounded-[1.25rem] border border-espresso/10 bg-warmIvory shadow-soft sm:rounded-[1.75rem] print:rounded-xl print:shadow-none"
         >
           <div className="h-2 bg-gradient-to-r from-copper via-deepTeal to-copperDark print:h-1" aria-hidden="true" />
-          <div className="grid gap-10 p-6 sm:p-8 md:grid-cols-[1.15fr_0.85fr] md:items-center lg:p-10">
+          <div className="grid gap-7 p-4 min-[390px]:p-5 sm:gap-10 sm:p-8 md:grid-cols-[1.15fr_0.85fr] md:items-center lg:p-10">
             <div className="text-center md:text-left">
               <p className="eyebrow print:hidden">Digital Card</p>
               <div className="mx-auto mt-6 size-28 overflow-hidden rounded-full border border-espresso/10 bg-softSand md:mx-0">
@@ -54,11 +54,11 @@ export default function CardPage() {
                   priority
                 />
               </div>
-              <h1 className="mt-6 font-display text-5xl font-semibold leading-none text-espresso sm:text-6xl">{siteConfig.name}</h1>
+              <h1 className="mt-6 font-display text-4xl font-semibold leading-none text-espresso min-[390px]:text-5xl sm:text-6xl">{siteConfig.name}</h1>
               <p className="mt-4 text-lg font-semibold text-deepTeal">{getSiteJobTitle()}</p>
               <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-muted">Toronto, Ontario, Canada</p>
               <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-muted md:mx-0">{siteConfig.description}</p>
-              <p className="mx-auto mt-5 max-w-xl rounded-full border border-copper/20 bg-copper/10 px-4 py-2 text-sm font-semibold text-espresso md:mx-0">
+              <p className="mx-auto mt-5 max-w-xl rounded-2xl border border-copper/20 bg-copper/10 px-4 py-2 text-sm font-semibold text-espresso sm:rounded-full md:mx-0">
                 Focus: corporate, luxury, hospitality, and high-stakes business gatherings.
               </p>
 
@@ -120,10 +120,10 @@ export default function CardPage() {
               </details>
             </div>
 
-            <aside className="rounded-[1.5rem] border border-espresso/10 bg-white/65 p-5 text-center shadow-sm print:bg-white print:shadow-none">
+            <aside className="rounded-[1.25rem] border border-espresso/10 bg-white/65 p-4 text-center shadow-sm sm:rounded-[1.5rem] sm:p-5 print:bg-white print:shadow-none">
               <h2 className="text-sm font-bold uppercase tracking-[0.22em] text-copper">Scan to save</h2>
               <div
-                className="mx-auto mt-5 inline-flex rounded-2xl bg-warmIvory p-4"
+                className="mx-auto mt-5 flex w-full max-w-[260px] rounded-2xl bg-warmIvory p-3 [&_svg]:h-auto [&_svg]:w-full sm:p-4"
                 role="img"
                 aria-label={`QR code for ${shortUrl}`}
                 dangerouslySetInnerHTML={{ __html: qrSvg }}

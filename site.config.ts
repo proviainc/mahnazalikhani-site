@@ -89,7 +89,7 @@ export const siteConfig = {
   cardRoutingLinks: [
     {
       label: 'Need a card or website like this?',
-      href: 'https://proviahub.com/website-os/',
+      href: 'https://proviahub.com/r/mahnaz/',
       external: true,
       event: 'card_website_os_outbound_click',
       description: 'See Website OS by ProVia Hub for source-of-truth websites and QR-ready digital presence.',

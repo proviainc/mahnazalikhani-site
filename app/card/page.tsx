@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { CopyLinkRow } from '../../components/copy-link-row';
 import { DownloadVcardButton } from '../../components/download-vcard-button';
@@ -64,9 +65,9 @@ export default function CardPage() {
               <div className="mx-auto mt-8 grid max-w-xl grid-cols-1 gap-3 min-[460px]:grid-cols-2 md:mx-0 print:hidden">
                 <TrackedLink link={siteConfig.primaryCta} className="btn-primary w-full" />
                 <DownloadVcardButton vcard={vcard} filename={getVcardFilename()} className="w-full" />
-                <a className="btn-secondary w-full" href="/">
-                  Visit Mahnaz's Website
-                </a>
+                <Link className="btn-secondary w-full" href="/">
+                  Visit Mahnaz&apos;s Website
+                </Link>
                 <TrackedLink link={siteConfig.secondaryCta} className="btn-secondary w-full" />
               </div>
 

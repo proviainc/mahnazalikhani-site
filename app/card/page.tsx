@@ -95,9 +95,20 @@ export default function CardPage() {
                       <TrackedLink
                         key={link.href}
                         link={link}
-                        className="group rounded-xl border border-espresso/10 bg-warmIvory/70 p-4 transition hover:border-copper/45 hover:bg-warmIvory focus:outline-none focus-visible:ring-2 focus-visible:ring-copper"
+                        className={
+                          link.featured
+                            ? 'group rounded-xl border border-copper/30 bg-copper/10 p-4 shadow-sm transition hover:border-copper/55 hover:bg-copper/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-copper'
+                            : 'group rounded-xl border border-espresso/10 bg-warmIvory/70 p-4 transition hover:border-copper/45 hover:bg-warmIvory focus:outline-none focus-visible:ring-2 focus-visible:ring-copper'
+                        }
                       >
-                        <span className="block text-sm font-bold text-espresso transition group-hover:text-copper">{link.label}</span>
+                        <span className="flex flex-wrap items-center gap-2 text-sm font-bold text-espresso transition group-hover:text-copper">
+                          {link.featured ? (
+                            <span className="rounded-full bg-deepTeal px-2 py-0.5 text-[0.65rem] uppercase tracking-[0.16em] text-warmIvory">
+                              Featured
+                            </span>
+                          ) : null}
+                          <span>{link.label}</span>
+                        </span>
                         <span className="mt-1 block text-sm leading-6 text-muted">{link.description}</span>
                       </TrackedLink>
                     ))}

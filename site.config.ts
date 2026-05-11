@@ -86,6 +86,29 @@ export const siteConfig = {
       ],
     },
   ],
+  cardRoutingLinks: [
+    {
+      label: 'Planning or executing an event?',
+      href: 'https://proviaevents.com/',
+      external: true,
+      event: 'card_proviaevents_outbound_click',
+      description: 'Visit ProVia Events for event planning, execution, guest operations, and company-service context.',
+    },
+    {
+      label: 'Exploring event operations software?',
+      href: 'https://eventagent.io/',
+      external: true,
+      event: 'card_eventagent_outbound_click',
+      description: 'Learn about EventAgent for structured event coordination, vendors, timelines, and operations.',
+    },
+    {
+      label: 'Need a card or website like this?',
+      href: 'https://proviahub.com/website-os/',
+      external: true,
+      event: 'card_website_os_outbound_click',
+      description: 'See Website OS by ProVia Hub for source-of-truth websites and QR-ready digital presence.',
+    },
+  ],
   /** Sitewide attribution; align with ProVia site template / web-core `Footer`. */
   engineeringAttribution: {
     label: 'Engineering: ProVia Hub',
@@ -126,6 +149,7 @@ export const siteConfig = {
   secondaryCta: SiteLink;
   navigation: SiteLink[];
   footerSections: Array<{ title: string; links: SiteLink[] }>;
+  cardRoutingLinks: Array<SiteLink & { description: string }>;
   engineeringAttribution?: { label: string; href: string };
   theme: Record<string, string>;
   typography: Record<string, string>;

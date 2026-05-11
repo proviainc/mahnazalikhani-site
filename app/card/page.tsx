@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { CopyLinkRow } from '../../components/copy-link-row';
 import { DownloadVcardButton } from '../../components/download-vcard-button';
-import { PageShell, TrackedLink } from '../../components/page-shell';
+import { TrackedLink } from '../../components/page-shell';
 import { BreadcrumbJsonLd } from '../../components/structured-data';
 import { getCardPageUrl, getShortCardEntryUrl } from '../../lib/card-urls';
 import { pageMetadata } from '../../lib/metadata';
@@ -27,7 +27,7 @@ export default function CardPage() {
   const vcard = buildVcard();
 
   return (
-    <PageShell>
+    <>
       <BreadcrumbJsonLd
         items={[
           { name: 'Home', pathname: '/' },
@@ -61,12 +61,13 @@ export default function CardPage() {
                 Focus: corporate, luxury, hospitality, and high-stakes business gatherings.
               </p>
 
-              <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start print:hidden">
-                <TrackedLink link={siteConfig.secondaryCta} className="btn-primary" />
-                <a className="btn-secondary" href={siteConfig.url}>
-                  Full Site
+              <div className="mx-auto mt-8 grid max-w-xl grid-cols-1 gap-3 min-[460px]:grid-cols-2 md:mx-0 print:hidden">
+                <TrackedLink link={siteConfig.primaryCta} className="btn-primary w-full" />
+                <DownloadVcardButton vcard={vcard} filename={getVcardFilename()} className="w-full" />
+                <a className="btn-secondary w-full" href="/">
+                  Visit Mahnaz's Website
                 </a>
-                <DownloadVcardButton vcard={vcard} filename={getVcardFilename()} />
+                <TrackedLink link={siteConfig.secondaryCta} className="btn-secondary w-full" />
               </div>
 
               <div className="mt-8 overflow-hidden rounded-2xl border border-espresso/10">
@@ -82,6 +83,26 @@ export default function CardPage() {
                   </a>
                 </div>
               </div>
+
+              <section className="mt-8 text-left print:hidden" aria-labelledby="card-routing-heading">
+                <div className="rounded-2xl border border-espresso/10 bg-softSand/45 p-4">
+                  <p id="card-routing-heading" className="text-xs font-bold uppercase tracking-[0.2em] text-muted">
+                    Choose the right path
+                  </p>
+                  <div className="mt-4 grid gap-3">
+                    {siteConfig.cardRoutingLinks.map((link) => (
+                      <TrackedLink
+                        key={link.href}
+                        link={link}
+                        className="group rounded-xl border border-espresso/10 bg-warmIvory/70 p-4 transition hover:border-copper/45 hover:bg-warmIvory focus:outline-none focus-visible:ring-2 focus-visible:ring-copper"
+                      >
+                        <span className="block text-sm font-bold text-espresso transition group-hover:text-copper">{link.label}</span>
+                        <span className="mt-1 block text-sm leading-6 text-muted">{link.description}</span>
+                      </TrackedLink>
+                    ))}
+                  </div>
+                </div>
+              </section>
 
               <div className="mt-8">
                 <CopyLinkRow shortUrl={shortUrl} pageUrl={pageUrl} />
@@ -116,6 +137,6 @@ export default function CardPage() {
           </div>
         </article>
       </section>
-    </PageShell>
+    </>
   );
 }

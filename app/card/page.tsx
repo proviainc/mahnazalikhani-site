@@ -21,10 +21,10 @@ export const metadata = pageMetadata({
   image: siteConfig.seo.defaultImage,
 });
 
-export default function CardPage() {
+export default async function CardPage() {
   const pageUrl = getCardPageUrl();
   const shortUrl = getShortCardEntryUrl();
-  const qrSvg = renderCardQrSvg({ width: 260, margin: 3 });
+  const qrSvg = await renderCardQrSvg(shortUrl, { width: 260, margin: 4 });
   const vcard = buildVcard();
 
   return (
@@ -134,7 +134,7 @@ export default function CardPage() {
             <aside className="rounded-[1.25rem] border border-espresso/10 bg-white/65 p-4 text-center shadow-sm sm:rounded-[1.5rem] sm:p-5 print:bg-white print:shadow-none">
               <h2 className="text-sm font-bold uppercase tracking-[0.22em] text-copper">Scan to save</h2>
               <div
-                className="mx-auto mt-5 flex w-full max-w-[260px] rounded-2xl bg-warmIvory p-3 [&_svg]:h-auto [&_svg]:w-full sm:p-4"
+                className="mx-auto mt-5 flex w-full max-w-[260px] rounded-2xl bg-white p-3 [&_svg]:h-auto [&_svg]:w-full sm:p-4"
                 role="img"
                 aria-label={`QR code for ${shortUrl}`}
                 dangerouslySetInnerHTML={{ __html: qrSvg }}

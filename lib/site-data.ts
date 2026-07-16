@@ -45,6 +45,14 @@ export const philosophy = [
   },
 ] as const;
 
+export const professionalCertification = {
+  title: 'Ontario-Recognized Food Handler Certificate',
+  validThrough: 'July 2031',
+  expiresOn: '2031-07-14',
+  description:
+    'Food safety training that supports responsible coordination around catered events and hospitality environments.',
+} as const;
+
 /**
  * LinkedIn-sourced project chapters; voice matches Stage 06 authenticity (specific, no hype).
  * Banic outcomes stay qualitative on-site; see `docs/06-authenticity-audit.md` for numeric policy.

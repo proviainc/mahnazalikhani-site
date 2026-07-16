@@ -2,7 +2,7 @@ import { PageShell } from '../../components/page-shell';
 import { CardGrid, CTASection, PageHero, SectionIntro } from '../../components/sections';
 import { BreadcrumbJsonLd } from '../../components/structured-data';
 import { pageMetadata } from '../../lib/metadata';
-import { philosophy } from '../../lib/site-data';
+import { philosophy, professionalCertification } from '../../lib/site-data';
 
 export const metadata = pageMetadata({
   title: 'About Mahnaz Alikhani | Senior Event Planner And Strategist',
@@ -39,6 +39,27 @@ export default function AboutPage() {
               That judgment is shaped by a wide arc of operating work: founding and scaling ProVia Events since 2024 across dozens of mid-scale corporate and gala programs; earlier high-volume showroom programs; structured hospitality training for large teams; hands-on restaurant workflow consulting; and B2B product leadership in hospitality technology, always with an eye toward repeatable systems, vendor coordination, and what actually happens when doors open.
             </p>
           </div>
+        </div>
+      </section>
+      <section className="section-shell">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <SectionIntro
+            eyebrow="Professional Certification"
+            title="Food safety training that supports hospitality-aware event execution."
+          />
+          <article className="card border-l-4 border-l-copper bg-warmIvory">
+            <h3 className="font-display text-3xl font-semibold text-espresso">
+              {professionalCertification.title}
+            </h3>
+            <p className="mt-4 text-sm font-bold uppercase tracking-[0.18em] text-copperDark">
+              <time dateTime={professionalCertification.expiresOn}>
+                Valid through {professionalCertification.validThrough}
+              </time>
+            </p>
+            <p className="mt-5 text-base leading-8 text-muted">
+              {professionalCertification.description}
+            </p>
+          </article>
         </div>
       </section>
       <section className="section-shell">

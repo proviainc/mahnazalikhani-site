@@ -8,7 +8,7 @@ export type SiteLink = {
 export const siteConfig = {
   name: 'Mahnaz Alikhani',
   description:
-    'Senior event strategist helping high-stakes event teams bring structure, guest experience, and event-day control to complex gatherings.',
+    'Founder of ProVia Events and Co-Founder of EventAgent.io, bringing calm event strategy, guest operations, and culturally aware execution to Toronto and GTA events.',
   logo: {
     text: 'Mahnaz Alikhani',
     alt: 'Mahnaz Alikhani',
@@ -34,10 +34,10 @@ export const siteConfig = {
     phoneVcardOnly: '+16479965350',
   },
   primaryCta: {
-    label: 'Book Consultation',
-    href: 'https://calendly.com/mahnazalikhani/event-strategy',
+    label: 'Start an Event Request',
+    href: 'https://proviaevents.com/contact/?utm_source=mahnazalikhani.com&utm_medium=referral&utm_campaign=mahnaz-profile-alignment&utm_content=primary-cta',
     external: true,
-    event: 'calendly_cta_click',
+    event: 'proviaevents_intake_click',
   },
   secondaryCta: {
     label: 'Connect on LinkedIn',
@@ -73,13 +73,13 @@ export const siteConfig = {
         },
         {
           label: 'ProVia Events',
-          href: 'https://proviaevents.com/',
+          href: 'https://proviaevents.com/?utm_source=mahnazalikhani.com&utm_medium=referral&utm_campaign=mahnaz-profile-alignment&utm_content=footer',
           external: true,
           event: 'proviaevents_outbound_click',
         },
         {
           label: 'EventAgent',
-          href: 'https://eventagent.io/',
+          href: 'https://eventagent.io/?utm_source=mahnazalikhani.com&utm_medium=referral&utm_campaign=mahnaz-profile-alignment&utm_content=footer',
           external: true,
           event: 'eventagent_outbound_click',
         },
@@ -97,14 +97,14 @@ export const siteConfig = {
     },
     {
       label: 'Planning or executing an event?',
-      href: 'https://proviaevents.com/',
+      href: 'https://proviaevents.com/contact/?utm_source=mahnazalikhani.com&utm_medium=referral&utm_campaign=mahnaz-profile-alignment&utm_content=digital-card',
       external: true,
       event: 'card_proviaevents_outbound_click',
       description: 'Visit ProVia Events for event planning, execution, guest operations, and company-service context.',
     },
     {
       label: 'Exploring event operations software?',
-      href: 'https://eventagent.io/',
+      href: 'https://eventagent.io/?utm_source=mahnazalikhani.com&utm_medium=referral&utm_campaign=mahnaz-profile-alignment&utm_content=digital-card',
       external: true,
       event: 'card_eventagent_outbound_click',
       description: 'Learn about EventAgent for structured event coordination, vendors, timelines, and operations.',
@@ -128,9 +128,9 @@ export const siteConfig = {
     sans: 'Inter',
   },
   seo: {
-    defaultTitle: 'Mahnaz Alikhani | Event Strategy For High-Stakes Gatherings',
+    defaultTitle: 'Mahnaz Alikhani | Founder, ProVia Events & Co-Founder, EventAgent.io',
     defaultDescription:
-      'Mahnaz Alikhani helps corporate, luxury, hospitality, and business-event teams bring structure, guest experience, and event-day control to complex gatherings.',
+      'Meet Mahnaz Alikhani, Founder of ProVia Events and Co-Founder of EventAgent.io, focused on calm event strategy, guest operations, and culturally aware execution.',
     defaultImage: '/uploads/mahnaz-alikhani-portrait.png',
   },
   /** v1 personal site: no Plausible/GA (stakeholder decision Feb 2026). */

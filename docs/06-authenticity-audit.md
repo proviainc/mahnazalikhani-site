@@ -6,9 +6,9 @@ The content direction passes if final copy stays specific, proof-led, and restra
 
 The biggest risk is not lack of proof. The biggest risk is using generic event-industry language when Mahnaz has stronger operational truth available.
 
-## Claims Approved For Use
+## Historical Claims Requiring Revalidation
 
-These are supported by available materials:
+These claims appear in historical materials. Under the August 2026 profile-alignment decision, they are an evidence inventory—not authorization for current public website use. Keep them off the site until their source, scope, date, rights, and wording are revalidated and approved:
 
 - 10+ years of event planning and hospitality experience.
 - 18 years total professional experience.
@@ -21,9 +21,9 @@ These are supported by available materials:
 - Banic Software served 2,000+ hospitality-sector businesses.
 - Hospitality Management education.
 
-### LinkedIn Project Chapters (Public Profile, Feb 2026)
+### LinkedIn Project Chapters (Public Profile, Feb 2026; Hold Numeric Detail)
 
-Approved for **marketing site** copy when phrased as below (specific, operational, no banned superlatives):
+Use only qualitative operational context on the marketing site until the numeric detail below is revalidated:
 
 - **ProVia Events (Jan 2024–present):** founding and scaling the company; 50+ events across business, technology, trade shows, networking, concerts, and galas; typical guest counts in the **roughly 200–800** range; emphasis on vendor and strategic partnerships, structured execution systems, cost-control discipline, and playbooks.
 - **Baran Showroom Event Series (May 2013–May 2014, Bartec Engineering / Baran Group):** sustained showroom program at high annual volume (~100+ events per year), small-group experiential formats (~50 guests), brand visibility and repeatable frameworks tied to commercial outcomes.
@@ -35,12 +35,12 @@ Approved for **marketing site** copy when phrased as below (specific, operationa
 
 Hold until approved:
 
-- Exact EventAgent **corporate/public job title** for use in schema and bylines. **Feb 2026:** personal site uses **strategy contributor** framing with EventAgent until Mahnaz and EventAgent approve a precise title (`docs/00-stakeholder-decisions.md`).
+- EventAgent product capability, readiness, adoption, or performance claims beyond the approved **Co-Founder, EventAgent.io** role.
 - Testimonials.
 - Client logos.
 - Event photos.
 - Private event details.
-- Founder prominence for ProVia Events, if not approved.
+- Numeric proof listed above until revalidated under the current decision.
 
 Soften:
 
@@ -105,4 +105,3 @@ Before implementation, check every major section:
 - Could this line appear on a competitor website unchanged?
 - Does this section change belief, understanding, or action?
 - Is there a clearer operational truth available?
-

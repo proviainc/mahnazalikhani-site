@@ -16,9 +16,9 @@ export default function HomePage() {
     <PageShell>
       <BreadcrumbJsonLd items={[{ name: 'Home', pathname: '/' }]} />
       <PageHero
-        eyebrow="Senior Event Planner And Strategist"
+        eyebrow="Founder, ProVia Events · Co-Founder, EventAgent.io"
         title="Calm event strategy for high-stakes gatherings."
-        description="Mahnaz Alikhani helps corporate, luxury, hospitality, and business-event teams bring structure, guest experience, and event-day control to complex gatherings."
+        description="Mahnaz Alikhani brings structure, culturally aware guest experience, and calm event-day control to complex gatherings. Event-service inquiries are handled through ProVia Events."
         portraitPriority
       />
       <ProofStrip items={proofPoints} />
@@ -26,7 +26,7 @@ export default function HomePage() {
         <SectionIntro
           eyebrow="Who Mahnaz Helps"
           title="For events where the details carry real reputational weight."
-          description="The site is intentionally focused: help visitors understand Mahnaz’s judgment, decide whether there is a fit, and book a consultation."
+          description="This site presents Mahnaz’s experience and judgment, then routes event-service inquiries to the appropriate ProVia Events intake."
         />
         <CardGrid items={audienceCards} role="fit" />
       </section>
@@ -45,8 +45,8 @@ export default function HomePage() {
         <CardGrid items={homeExperiencePreview} role="proof" />
       </section>
       <CTASection
-        title="Start with a focused event strategy conversation."
-        description="Use the consultation to clarify the event vision, pressure points, operating model, and next decisions before the work becomes urgent."
+        title="Planning an event that needs calm, structured execution?"
+        description="Start with the ProVia Events intake so the event, pressure points, and appropriate support path can be reviewed together."
       />
     </PageShell>
   );

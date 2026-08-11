@@ -30,7 +30,7 @@ const proofAreas = [
   {
     title: 'Technology-Informed Strategy',
     description:
-      'Connecting real event workflows with EventAgent’s operating context, so technology is grounded in practical event needs.',
+      'As Co-Founder of EventAgent.io, connecting real event workflows with product decisions grounded in practical organizer needs.',
   },
 ] as const;
 
@@ -63,8 +63,8 @@ export default function ExperiencePage() {
         <CardGrid items={proofAreas} role="fit" />
       </section>
       <CTASection
-        title="Meet her to find out what she can do for your event."
-        description="The consultation is the fastest way to understand the event context, clarify the stakes, and decide what level of planning support makes sense."
+        title="Bring the event context to ProVia Events."
+        description="The structured intake is the clearest way to explain the event, clarify the stakes, and identify the appropriate support path."
       />
     </PageShell>
   );

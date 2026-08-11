@@ -12,7 +12,7 @@ import { buildVcard, getSiteJobTitle, getVcardFilename } from '../../lib/vcard';
 import { siteConfig } from '../../site.config';
 
 const cardTitle = `${siteConfig.name} Digital Business Card`;
-const cardDescription = `Save contact details for ${siteConfig.name}, senior event planner and event strategist.`;
+const cardDescription = `Save contact details for ${siteConfig.name}, Founder of ProVia Events and Co-Founder of EventAgent.io.`;
 
 export const metadata = pageMetadata({
   title: cardTitle,
@@ -59,7 +59,7 @@ export default async function CardPage() {
               <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-muted">Toronto, Ontario, Canada</p>
               <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-muted md:mx-0">{siteConfig.description}</p>
               <p className="mx-auto mt-5 max-w-xl rounded-2xl border border-copper/20 bg-copper/10 px-4 py-2 text-sm font-semibold text-espresso sm:rounded-full md:mx-0">
-                Focus: corporate, luxury, hospitality, and high-stakes business gatherings.
+                Focus: event strategy, guest operations, culturally aware planning, and event-workflow leadership.
               </p>
 
               <div className="mx-auto mt-8 grid max-w-xl grid-cols-1 gap-3 min-[460px]:grid-cols-2 md:mx-0 print:hidden">

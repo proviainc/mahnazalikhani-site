@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     url: siteConfig.url,
     image: portraitUrl,
     email: siteConfig.contact.work.email,
-    jobTitle: 'Senior Event Planner and Event Strategist',
+    jobTitle: 'Founder of ProVia Events and Co-Founder of EventAgent.io',
     sameAs: [
       'https://www.linkedin.com/in/mahnazalikhani/',
       'https://proviaevents.com/',
@@ -39,13 +39,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Event Strategy Consultation',
+    name: 'Event Strategy and Planning Through ProVia Events',
     provider: {
-      '@type': 'Person',
-      name: 'Mahnaz Alikhani',
+      '@type': 'Organization',
+      name: 'ProVia Events',
+      url: 'https://proviaevents.com/',
     },
-    areaServed: 'Canada',
-    serviceType: 'Event strategy and event planning consultation',
+    areaServed: 'Toronto and the Greater Toronto Area',
+    serviceType: 'Event strategy, planning, coordination, and guest operations',
     url: new URL('/event-strategy', siteConfig.url).toString(),
   };
 

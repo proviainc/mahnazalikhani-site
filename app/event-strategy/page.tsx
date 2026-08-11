@@ -5,9 +5,9 @@ import { pageMetadata } from '../../lib/metadata';
 import { consultationFit } from '../../lib/site-data';
 
 export const metadata = pageMetadata({
-  title: 'Event Strategy Consultation | Mahnaz Alikhani',
+  title: 'Event Strategy | Mahnaz Alikhani and ProVia Events',
   description:
-    'Book an event strategy consultation with Mahnaz Alikhani for corporate, luxury, hospitality, and business events that need clarity before execution.',
+    'Review event strategy needs with ProVia Events through a structured request covering goals, guest experience, operational pressure, and next steps.',
   pathname: '/event-strategy',
 });
 
@@ -39,14 +39,14 @@ export default function EventStrategyPage() {
         ]}
       />
       <PageHero
-        eyebrow="Event Strategy Consultation"
-        title="A focused conversation before the event becomes urgent."
-        description="Book time with Mahnaz to clarify what the event needs, where risk may be hiding, and how to approach planning with more control."
+        eyebrow="Event Strategy Through ProVia Events"
+        title="Start with structure before the event becomes urgent."
+        description="Submit the event through ProVia Events so Mahnaz and the appropriate delivery path can review what the event needs, where risk may be hiding, and what should happen next."
       />
       <section className="section-shell">
         <SectionIntro
           eyebrow="Best Fit"
-          title="The consultation is designed for teams who need clarity before committing the next step."
+          title="The intake is designed for teams who need clarity before committing the next step."
         />
         <div className="mt-10 grid gap-4">
           {consultationFit.map((item, index) => (
@@ -67,8 +67,8 @@ export default function EventStrategyPage() {
         <CardGrid items={consultationSteps} role="process" />
       </section>
       <CTASection
-        title="Book Mahnaz’s event strategy consultation."
-        description="Calendly is the primary booking path for launch. LinkedIn remains available as a secondary trust and connection channel."
+        title="Start your event request with ProVia Events."
+        description="Use the structured intake as the primary path. LinkedIn remains available as a secondary professional connection channel."
       />
     </PageShell>
   );

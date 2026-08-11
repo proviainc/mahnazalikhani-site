@@ -71,7 +71,7 @@ function SiteFooter() {
         <div>
           <p className="font-display text-3xl font-semibold">{siteConfig.logo.text}</p>
           <p className="mt-4 max-w-xl text-sm leading-7 text-warmIvory/72">
-            Senior event strategy for complex corporate, luxury, hospitality, and business gatherings.
+            Founder of ProVia Events and Co-Founder of EventAgent.io, focused on calm event strategy and guest operations.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <TrackedLink link={siteConfig.primaryCta} className="btn-primary btn-on-dark" />
@@ -135,4 +135,3 @@ export function PageShell({ children }: { children: ReactNode }) {
 }
 
 export { TrackedLink };
-

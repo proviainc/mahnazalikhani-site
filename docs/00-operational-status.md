@@ -19,7 +19,7 @@ Browser QA on the **Cloudflare preview URL**, Pages project wiring, and DNS cuto
 - Docs folder exists: yes
 - Domain target: `mahnazalikhani.com` (apex canonical; redirect `www` → apex at DNS or edge)
 - Language: English
-- Primary CTA: Calendly consultation booking
+- Primary CTA: tracked ProVia Events structured intake
 - Secondary CTA: LinkedIn connection
 - Public trust sources: resume, LinkedIn, ProVia Events, EventAgent
 - Website purpose: personal credibility for Mahnaz, not a replacement for ProVia Events
@@ -31,7 +31,9 @@ Browser QA on the **Cloudflare preview URL**, Pages project wiring, and DNS cuto
 - Favicon: `app/icon.svg` MA monogram
 - ProVia copy: **founded and scaled** approved on personal site
 - Banic: **qualitative** outcomes on marketing site
-- EventAgent: **strategy contributor** wording until exact title approved
+- EventAgent: **Co-Founder, EventAgent.io** is the approved public role
+- EventBoxed: absent from the personal website for now; LinkedIn About-only until the separate entity/formal role is ready
+- Numeric proof: held from public website copy until current evidence is revalidated and approved
 
 ## Not Yet Confirmed
 
@@ -51,7 +53,7 @@ Browser QA on the **Cloudflare preview URL**, Pages project wiring, and DNS cuto
 
 - Production launch until preview review is approved
 - Production domain connection
-- Precise **corporate** EventAgent job title in external systems, on-site remains neutral until approved
+- Publication of any unverified numeric proof or EventAgent product-readiness claim
 - Use of unapproved testimonials, client logos, or private-event media
 
 ## Latest Verification
@@ -60,4 +62,3 @@ Browser QA on the **Cloudflare preview URL**, Pages project wiring, and DNS cuto
 - `next build` passed and exported the static site
 - `vitest run --passWithNoTests` passed with no test files
 - `next lint` passed with no warnings or errors
-

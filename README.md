@@ -1,6 +1,6 @@
 # Mahnaz Alikhani Site
 
-Code-managed personal credibility website for Mahnaz Alikhani, senior event planner and strategist.
+Code-managed personal credibility website for Mahnaz Alikhani, Founder of ProVia Events and Co-Founder of EventAgent.io.
 
 ## Launch Scope
 
@@ -10,7 +10,7 @@ Code-managed personal credibility website for Mahnaz Alikhani, senior event plan
 - Speaking (first pass for emcee and panel inquiries)
 - Event Strategy
 
-Primary CTA: Calendly consultation. Secondary CTA: LinkedIn. Contact: work and personal email in footer.
+Primary CTA: tracked ProVia Events intake. Secondary CTA: LinkedIn. The site does not operate a separate Mahnaz services funnel. Contact: work and personal email in footer.
 
 ## Repository
 

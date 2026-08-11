@@ -20,7 +20,7 @@ function getNameParts(fullName: string) {
 }
 
 export function getSiteJobTitle() {
-  return 'Senior Event Planner and Event Strategist';
+  return 'Founder, ProVia Events | Co-Founder, EventAgent.io';
 }
 
 export function buildVcard() {

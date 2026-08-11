@@ -28,25 +28,19 @@ export default function SpeakingPage() {
         />
         <div className="mt-10 max-w-3xl space-y-6 text-lg leading-9 text-muted">
           <div className="rounded-[2rem] border border-espresso/10 bg-softSand/40 p-6 text-base leading-8 text-muted">
-            <p className="font-semibold text-espresso">Contact for speaking</p>
+            <p className="font-semibold text-espresso">Route speaking and emcee inquiries through ProVia Events</p>
             <p className="mt-2">
               <span className="text-muted">Work: </span>
               <a className="font-semibold text-deepTeal underline decoration-copper/40 underline-offset-2" href={`mailto:${siteConfig.contact.work.email}`}>
                 {siteConfig.contact.work.email}
               </a>
             </p>
-            <p className="mt-1">
-              <span className="text-muted">Personal: </span>
-              <a className="font-semibold text-deepTeal underline decoration-copper/40 underline-offset-2" href={`mailto:${siteConfig.contact.personal.email}`}>
-                {siteConfig.contact.personal.email}
-              </a>
-            </p>
           </div>
         </div>
       </section>
       <CTASection
-        title="Prefer to start with a short strategy conversation?"
-        description="Use the Calendly consultation if the first step is clarifying fit, timing, and how Mahnaz should prepare for your program."
+        title="Planning a program that needs a speaker, host, or emcee?"
+        description="Start through ProVia Events so format, timing, audience, scope, and availability can be reviewed together."
       />
     </PageShell>
   );

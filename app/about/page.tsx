@@ -5,9 +5,9 @@ import { pageMetadata } from '../../lib/metadata';
 import { philosophy, professionalCertification } from '../../lib/site-data';
 
 export const metadata = pageMetadata({
-  title: 'About Mahnaz Alikhani | Senior Event Planner And Strategist',
+  title: 'About Mahnaz Alikhani | Founder, ProVia Events & Co-Founder, EventAgent.io',
   description:
-    'Learn about Mahnaz Alikhani, a senior event planner and strategist supporting corporate, luxury, hospitality, and business events.',
+    'Learn about Mahnaz Alikhani, Founder of ProVia Events and Co-Founder of EventAgent.io, and her approach to event strategy and guest operations.',
   pathname: '/about',
 });
 
@@ -36,7 +36,7 @@ export default function AboutPage() {
               Mahnaz brings a senior planner’s perspective to events where many people, vendors, timelines, and expectations must come together at once. Her work is grounded in calm decision-making, practical structure, and careful attention to the guest experience.
             </p>
             <p>
-              That judgment is shaped by a wide arc of operating work: founding and scaling ProVia Events since 2024 across dozens of mid-scale corporate and gala programs; earlier high-volume showroom programs; structured hospitality training for large teams; hands-on restaurant workflow consulting; and B2B product leadership in hospitality technology, always with an eye toward repeatable systems, vendor coordination, and what actually happens when doors open.
+              That judgment is shaped by a wide arc of operating work: founding ProVia Events, directing recurring showroom programs, developing structured hospitality training, improving restaurant workflows, and leading B2B hospitality technology initiatives. As Co-Founder of EventAgent.io, she also brings real organizer context into event-workflow product decisions.
             </p>
           </div>
         </div>
@@ -67,8 +67,8 @@ export default function AboutPage() {
         <CardGrid items={philosophy} />
       </section>
       <CTASection
-        title="Have a planning question where senior experience could help?"
-        description="Book a consultation to discuss the event, the stakes, and the decisions that need clarity before execution begins."
+        title="Have an event that needs experienced operational judgment?"
+        description="Share the event through ProVia Events so the team can review the stakes, fit, and appropriate next step."
       />
     </PageShell>
   );

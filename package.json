@@ -10,7 +10,8 @@
     "lint": "next lint",
     "test": "vitest run --passWithNoTests",
     "typecheck": "tsc --noEmit",
-    "cf:sync-dns": "bash scripts/cloudflare-sync-pages-dns.sh"
+    "cf:sync-dns": "bash scripts/cloudflare-sync-pages-dns.sh",
+    "verify": "pnpm lint && pnpm test && pnpm typecheck && pnpm build"
   },
   "dependencies": {
     "next": "^15.1.4",

@@ -80,15 +80,21 @@ function SiteFooter() {
           <div className="mt-10 border-t border-warmIvory/15 pt-8">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-copperLight">Email</p>
             <p className="mt-3 text-sm text-warmIvory/85">
-              <span className="text-warmIvory/55">Work </span>
+              <span className="text-warmIvory/55">EventAgent </span>
+              <a className="font-semibold text-warmIvory underline decoration-copper/50 underline-offset-2" href={`mailto:${siteConfig.contact.eventAgent.email}`}>
+                {siteConfig.contact.eventAgent.label}
+              </a>
+            </p>
+            <p className="mt-2 text-sm text-warmIvory/85">
+              <span className="text-warmIvory/55">ProVia Events </span>
               <a className="font-semibold text-warmIvory underline decoration-copper/50 underline-offset-2" href={`mailto:${siteConfig.contact.work.email}`}>
-                {siteConfig.contact.work.email}
+                {siteConfig.contact.work.label}
               </a>
             </p>
             <p className="mt-2 text-sm text-warmIvory/85">
               <span className="text-warmIvory/55">Personal </span>
               <a className="font-semibold text-warmIvory underline decoration-copper/50 underline-offset-2" href={`mailto:${siteConfig.contact.personal.email}`}>
-                {siteConfig.contact.personal.email}
+                {siteConfig.contact.personal.label}
               </a>
             </p>
           </div>

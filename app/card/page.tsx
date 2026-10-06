@@ -62,25 +62,42 @@ export default async function CardPage() {
                 Focus: event strategy, guest operations, culturally aware planning, and event-workflow leadership.
               </p>
 
-              <div className="mx-auto mt-8 grid max-w-xl grid-cols-1 gap-3 min-[460px]:grid-cols-2 md:mx-0 print:hidden">
-                <TrackedLink link={siteConfig.primaryCta} className="btn-primary w-full" />
+              <div className="mx-auto mt-8 max-w-xl rounded-2xl border border-deepTeal/15 bg-deepTeal/10 px-4 py-3 text-sm font-semibold leading-6 text-espresso md:mx-0 print:hidden">
+                Meeting Mahnaz at an event? Use the EventAgent start form to answer a few questions and get routed to the right next step.
+              </div>
+
+              <div className="mx-auto mt-4 grid max-w-xl grid-cols-1 gap-3 min-[460px]:grid-cols-2 md:mx-0 print:hidden">
+                <TrackedLink
+                  link={siteConfig.eventAgentStartCta}
+                  className="btn-primary w-full bg-deepTeal hover:bg-espresso min-[460px]:col-span-2"
+                />
                 <DownloadVcardButton vcard={vcard} filename={getVcardFilename()} className="w-full" />
+                <TrackedLink link={siteConfig.secondaryCta} className="btn-secondary w-full" />
+                <TrackedLink link={siteConfig.primaryCta} className="btn-secondary w-full" />
                 <Link className="btn-secondary w-full" href="/">
                   Visit Mahnaz&apos;s Website
                 </Link>
-                <TrackedLink link={siteConfig.secondaryCta} className="btn-secondary w-full" />
               </div>
 
               <div className="mt-8 overflow-hidden rounded-2xl border border-espresso/10">
-                <h2 className="sr-only">Email</h2>
-                <div className="grid divide-y divide-espresso/10 text-left text-sm sm:grid-cols-2 sm:divide-x sm:divide-y-0">
+                <div className="border-b border-espresso/10 bg-softSand/35 p-4 text-left">
+                  <h2 className="text-sm font-bold text-espresso">Choose the best email for your follow-up</h2>
+                  <p className="mt-1 text-sm leading-6 text-muted">
+                    Use EventAgent for product conversations, ProVia Events for planning inquiries, or personal for direct follow-up.
+                  </p>
+                </div>
+                <div className="grid divide-y divide-espresso/10 text-left text-sm md:grid-cols-3 md:divide-x md:divide-y-0">
+                  <a className="p-4 transition hover:bg-softSand/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-copper" href={`mailto:${siteConfig.contact.eventAgent.email}`}>
+                    <span className="block text-xs font-bold uppercase tracking-[0.2em] text-muted">EventAgent</span>
+                    <span className="mt-2 block break-words font-semibold text-espresso">{siteConfig.contact.eventAgent.label}</span>
+                  </a>
                   <a className="p-4 transition hover:bg-softSand/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-copper" href={`mailto:${siteConfig.contact.work.email}`}>
-                    <span className="block text-xs font-bold uppercase tracking-[0.2em] text-muted">Work</span>
-                    <span className="mt-2 block font-semibold text-espresso">{siteConfig.contact.work.email}</span>
+                    <span className="block text-xs font-bold uppercase tracking-[0.2em] text-muted">ProVia Events</span>
+                    <span className="mt-2 block break-words font-semibold text-espresso">{siteConfig.contact.work.label}</span>
                   </a>
                   <a className="p-4 transition hover:bg-softSand/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-copper" href={`mailto:${siteConfig.contact.personal.email}`}>
                     <span className="block text-xs font-bold uppercase tracking-[0.2em] text-muted">Personal</span>
-                    <span className="mt-2 block font-semibold text-espresso">{siteConfig.contact.personal.email}</span>
+                    <span className="mt-2 block break-words font-semibold text-espresso">{siteConfig.contact.personal.label}</span>
                   </a>
                 </div>
               </div>

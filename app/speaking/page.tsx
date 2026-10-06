@@ -32,7 +32,7 @@ export default function SpeakingPage() {
             <p className="mt-2">
               <span className="text-muted">Work: </span>
               <a className="font-semibold text-deepTeal underline decoration-copper/40 underline-offset-2" href={`mailto:${siteConfig.contact.work.email}`}>
-                {siteConfig.contact.work.email}
+                {siteConfig.contact.work.label}
               </a>
             </p>
           </div>

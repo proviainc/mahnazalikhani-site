@@ -23,8 +23,12 @@ export const siteConfig = {
   /** Apex is canonical; `www` → apex is enforced in `public/_worker.js` (Pages advanced mode). */
   contact: {
     work: {
-      label: 'mahnaz@proviaevents.com',
-      email: 'mahnaz@proviaevents.com',
+      label: 'info@ProViaEvents.com',
+      email: 'info@proviaevents.com',
+    },
+    eventAgent: {
+      label: 'Mahnaz@EventAgent.io',
+      email: 'mahnaz@eventagent.io',
     },
     personal: {
       label: 'mahnaz.alikhani53@gmail.com',
@@ -44,6 +48,12 @@ export const siteConfig = {
     href: 'https://www.linkedin.com/in/mahnazalikhani/',
     external: true,
     event: 'linkedin_click',
+  },
+  eventAgentStartCta: {
+    label: 'Open EventAgent Start Form',
+    href: 'https://eventagent.io/start',
+    external: true,
+    event: 'eventagent_start_click',
   },
   navigation: [
     { label: 'About', href: '/about' },
@@ -103,11 +113,11 @@ export const siteConfig = {
       description: 'Visit ProVia Events for event planning, execution, guest operations, and company-service context.',
     },
     {
-      label: 'Exploring event operations software?',
-      href: 'https://eventagent.io/?utm_source=mahnazalikhani.com&utm_medium=referral&utm_campaign=mahnaz-profile-alignment&utm_content=digital-card',
+      label: 'Not sure where EventAgent fits?',
+      href: 'https://eventagent.io/start',
       external: true,
       event: 'card_eventagent_outbound_click',
-      description: 'Learn about EventAgent for structured event coordination, vendors, timelines, and operations.',
+      description: 'Answer a short start form and get routed to the right organizer, vendor, venue, event draft, or demo path.',
     },
   ],
   /** Sitewide attribution; align with ProVia site template / web-core `Footer`. */
@@ -143,11 +153,13 @@ export const siteConfig = {
   url: string;
   contact: {
     work: { label: string; email: string };
+    eventAgent: { label: string; email: string };
     personal: { label: string; email: string };
     phoneVcardOnly?: string;
   };
   primaryCta: SiteLink;
   secondaryCta: SiteLink;
+  eventAgentStartCta: SiteLink;
   navigation: SiteLink[];
   footerSections: Array<{ title: string; links: SiteLink[] }>;
   cardRoutingLinks: Array<SiteLink & { description: string; featured?: boolean }>;

@@ -32,6 +32,7 @@ export function buildVcard() {
     `FN:${escapeVcardText(siteConfig.name)}`,
     `TITLE:${escapeVcardText(getSiteJobTitle())}`,
     'ORG:ProVia Events',
+    `EMAIL;TYPE=WORK:${siteConfig.contact.eventAgent.email}`,
     `EMAIL;TYPE=WORK:${siteConfig.contact.work.email}`,
     `EMAIL;TYPE=HOME:${siteConfig.contact.personal.email}`,
     ...(siteConfig.contact.phoneVcardOnly ? [`TEL;TYPE=CELL:${siteConfig.contact.phoneVcardOnly}`] : []),

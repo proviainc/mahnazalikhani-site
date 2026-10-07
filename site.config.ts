@@ -122,7 +122,7 @@ export const siteConfig = {
   ],
   /** Sitewide attribution; align with ProVia site template / web-core `Footer`. */
   engineeringAttribution: {
-    label: 'Engineering: ProVia Hub',
+    label: 'Built by ProVia Hub',
     href: 'https://proviahub.com',
   },
   theme: {
